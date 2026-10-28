@@ -2,22 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <meta name="description" content="plain-muscle. December 2026." />
     <meta name="theme-color" content="#ffffff" />
     <title>plain-muscle — December 2026</title>
+    <script>
+      let savedTheme;
+      try {
+        savedTheme = localStorage.getItem("plain-muscle-theme");
+      } catch {}
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    </script>
     <style>
       * {
         box-sizing: border-box;
       }
 
       html {
-        background: #fff;
-        color: #000;
+        --background: #fff;
+        --foreground: #000;
+        --mascot-filter: brightness(0);
+        background: var(--background);
+        color: var(--foreground);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
         color-scheme: light;
+        transition: background-color 200ms ease, color 200ms ease;
+      }
+
+      html[data-theme="dark"] {
+        --background: #000;
+        --foreground: #fff;
+        --mascot-filter: brightness(0) invert(1);
+        color-scheme: dark;
+      }
+
+      html,
+      body {
+        width: 100%;
+        overflow-x: hidden;
+        overscroll-behavior-x: none;
+        touch-action: pan-y;
       }
 
       body {
@@ -51,7 +80,38 @@
         display: block;
         width: 100%;
         height: auto;
-        filter: grayscale(1) contrast(2);
+        filter: var(--mascot-filter);
+      }
+
+      .light-switch {
+        position: absolute;
+        bottom: calc(78% + 12px);
+        left: 50%;
+        width: 64px;
+        height: 100px;
+        padding: 8px;
+        transform: translateX(-50%);
+        border: 0;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .light-switch svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .light-switch:focus-visible {
+        outline: 1px dashed currentColor;
+        outline-offset: 4px;
+        border-radius: 8px;
+      }
+
+      html[data-theme="dark"] .light-rays {
+        opacity: 0;
       }
 
       .sleep-letters {
@@ -104,9 +164,18 @@
         .sleep-letters {
           font-size: 18px;
         }
+
+        .light-switch {
+          height: 68px;
+          bottom: calc(78% + 4px);
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
+        html {
+          transition: none;
+        }
+
         .sleep-letters span {
           animation-duration: 7.5s;
         }
@@ -142,11 +211,22 @@
         <div class="mascot">
           <img
             class="logo"
-            src="assets/plain-muscle.png"
+            src="assets/plain-muscle-transparent.png"
             alt="A sleeping black mascot wearing headphones"
             width="1448"
             height="1086"
           />
+          <button class="light-switch" type="button" aria-label="Turn the light off" aria-pressed="false" title="Turn the light off">
+            <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
+              <path d="M32 3v38" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <path d="M28 46h8" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
+              <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
+              <g class="light-rays" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
+              </g>
+            </svg>
+          </button>
           <div class="sleep-letters" aria-hidden="true">
             <span>z</span>
             <span>z</span>
@@ -157,5 +237,32 @@
         <p><time datetime="2026-12">December 2026</time></p>
       </section>
     </main>
+    <script>
+      const root = document.documentElement;
+      const lightSwitch = document.querySelector(".light-switch");
+      const themeColor = document.querySelector('meta[name="theme-color"]');
+
+      // Safari may allow pinch zoom despite the viewport setting.
+      document.addEventListener("gesturestart", (event) => event.preventDefault(), { passive: false });
+
+      function updateLight() {
+        const dark = root.dataset.theme === "dark";
+        const label = dark ? "Turn the light on" : "Turn the light off";
+        lightSwitch.setAttribute("aria-label", label);
+        lightSwitch.setAttribute("aria-pressed", String(dark));
+        lightSwitch.title = label;
+        themeColor.content = dark ? "#000000" : "#ffffff";
+      }
+
+      lightSwitch.addEventListener("click", () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+        try {
+          localStorage.setItem("plain-muscle-theme", root.dataset.theme);
+        } catch {}
+        updateLight();
+      });
+
+      updateLight();
+    </script>
   </body>
 </html>
