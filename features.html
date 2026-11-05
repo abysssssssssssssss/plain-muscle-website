@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Features · Plain Muscle</title>
+    <meta name="description" content="Lock In, workout logging, calendar, Peaks, ranks and the Rank Book: everything Plain Muscle does." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://plain-muscle.com/features.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Plain Muscle" />
+    <meta property="og:title" content="Features · Plain Muscle" />
+    <meta property="og:description" content="Lock In, workout logging, calendar, Peaks, ranks and the Rank Book: everything Plain Muscle does." />
+    <meta property="og:url" content="https://plain-muscle.com/features.html" />
+    <meta property="og:image" content="https://plain-muscle.com/assets/plain-muscle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/muco-favicon.png" />
+    <link rel="apple-touch-icon" href="assets/muco-favicon.png" />
+    <script>
+      document.documentElement.classList.add("js");
+      let savedTheme;
+      try {
+        savedTheme = localStorage.getItem("plain-muscle-theme");
+      } catch {}
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img src="assets/muco-favicon.png" alt="" width="1254" height="1254" />
+          Plain Muscle
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle active" type="button" aria-expanded="false" aria-controls="menu-product">Product<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-product">
+                <li><a href="features.html" aria-current="page">Features</a></li>
+                <li><a href="updates.html">Updates</a></li>
+              </ul>
+            </li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-legal">Legal<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-legal">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="eula.html">EULA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="icon-button light-switch" type="button" aria-label="Turn the light off" aria-pressed="false">
+          <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
+            <path d="M32 3v38" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M28 46h8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
+            <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
+            <g class="light-rays" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+              <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
+            </g>
+          </svg>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-head">
+        <div class="wrap">
+          <h1>Features</h1>
+          <p class="lead">Everything Plain Muscle does, and nothing it doesn't need to.</p>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="feature reveal" id="focus" aria-labelledby="focus-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/focus.jpg" alt="Plain Muscle focus mode screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="focus-title">Focus UI</h2>
+            <p class="lead">Turn on Focus mode and the app shrinks to what matters: this week's goal and the days you trained.</p>
+            <ul class="checks">
+              <li>Weekly workout goal front and center</li>
+              <li>Month calendar of every day you trained</li>
+              <li>Lock In one tap away</li>
+              <li>No feeds, no ads, no clutter</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="lock-in" aria-labelledby="lock-in-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/lock-in.jpg" alt="Plain Muscle lock in screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Only on Plain Muscle</span>
+            <h2 id="lock-in-title">Locked In Mode</h2>
+            <p class="lead">Pick a commitment and stick to it. No other gym app holds you to your word like this.</p>
+            <ul class="checks">
+              <li>Commit for 1 week, 2 weeks, 1, 3, 4 or 6 months, or a full year</li>
+              <li>Log workouts on at least 3 days in every 7-day block</li>
+              <li>Never go 6 days in a row without a workout</li>
+              <li>No cancelling once you sign up</li>
+              <li>Finish to earn exclusive Locked In ranks</li>
+            </ul>
+            <p class="quote">Are you sure you want to lock in?</p>
+          </div>
+        </section>
+
+        <section class="feature reveal" id="quick-log" aria-labelledby="quick-log-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/log-workout.jpg" alt="Plain Muscle log workout screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="quick-log-title">Logging & split planning</h2>
+            <p class="lead">Build your weekly split once, then just show up and check off sets.</p>
+            <ul class="checks">
+              <li>Today's exercises ready from your split</li>
+              <li>Check off sets as you go</li>
+              <li>Weight and reps for every set</li>
+              <li>Save once and the day is logged</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" aria-labelledby="calendar-title">
+          <div class="shot" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-screen">
+                <!-- TODO: screenshot "calendar". Replace the placeholder below with <img src="assets/screens/calendar.jpg" alt="Calendar screen" /> -->
+                <div class="placeholder">
+                  <strong>Calendar screen</strong>
+                  Screenshot coming soon
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="calendar-title">Calendar</h2>
+            <p class="lead">Every workout you save lands on your calendar, so you can see your consistency at a glance.</p>
+            <ul class="checks">
+              <li>Month view of every session</li>
+              <li>Tap a day to see what you did</li>
+              <li>Lock In days marked on the calendar</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature reveal" aria-labelledby="peaks-title">
+          <div class="shot" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-screen">
+                <!-- TODO: screenshot "peaks". Replace the placeholder below with <img src="assets/screens/peaks.jpg" alt="Peaks screen" /> -->
+                <div class="placeholder">
+                  <strong>Peaks screen</strong>
+                  Screenshot coming soon
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="peaks-title">Peaks</h2>
+            <p class="lead">Your personal records and strength over time, exercise by exercise.</p>
+            <ul class="checks">
+              <li>Best lift for every exercise</li>
+              <li>Strength charts over time</li>
+              <li>Full workout history per exercise</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="ranks" aria-labelledby="ranks-title">
+          <div class="shot badges">
+            <div class="badge-group">
+              <h3>Classic</h3>
+              <ul class="badge-grid">
+                <li><img src="assets/ranks/iron.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Iron<small>1 workout</small></li>
+                <li><img src="assets/ranks/bronze.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Bronze<small>10 workouts</small></li>
+                <li><img src="assets/ranks/silver.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Silver<small>30 workouts</small></li>
+                <li><img src="assets/ranks/gold.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Gold<small>60 workouts</small></li>
+                <li><img src="assets/ranks/platinum.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Plat<small>100 workouts</small></li>
+                <li><img src="assets/ranks/diamond.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Diamond<small>150 workouts</small></li>
+                <li><img src="assets/ranks/master.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Master<small>201 workouts</small></li>
+                <li><img src="assets/ranks/muscle.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Muscle<small>300 workouts</small></li>
+              </ul>
+            </div>
+            <div class="badge-group">
+              <h3>Locked In</h3>
+              <ul class="badge-grid five">
+                <li><img src="assets/ranks/zenus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Zenus<small>1 month</small></li>
+                <li><img src="assets/ranks/elderon.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Eldron<small>3 months</small></li>
+                <li><img src="assets/ranks/primalus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Primalus<small>6 months</small></li>
+                <li><img src="assets/ranks/ascendor.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Ascendor<small>1 year</small></li>
+                <li><img src="assets/ranks/honorado.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Honorado<small>2 years</small></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="ranks-title">Rank & badges</h2>
+            <p class="lead">Every workout counts toward your next rank. Every badge you earn goes in your Rank Book.</p>
+            <ul class="checks">
+              <li>8 Classic ranks, from Iron to Muscle</li>
+              <li>5 Locked In ranks, from Zenus to Honorado</li>
+              <li>Sign each new badge in your Rank Book</li>
+              <li>Rank-up animation every time you climb</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature reveal" aria-labelledby="rank-book-title">
+          <div class="shot" aria-hidden="true">
+            <div class="phone">
+              <div class="phone-screen">
+                <!-- TODO: screenshot "rank-book". Replace the placeholder below with <img src="assets/screens/rank-book.jpg" alt="Rank Book screen" /> -->
+                <div class="placeholder">
+                  <strong>Rank Book screen</strong>
+                  Screenshot coming soon
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="rank-book-title">Rank Book</h2>
+            <p class="lead">A book of every badge you've earned, each one signed with your finger.</p>
+            <ul class="checks">
+              <li>Classic and Locked In pages</li>
+              <li>Sign again for every new badge</li>
+              <li>See when you earned each rank</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="faq-title">FAQ</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Is it free?</summary>
+              <!-- TODO: confirm pricing before launch. -->
+              <p>Pricing will be announced at launch in December 2026.</p>
+            </details>
+            <details>
+              <summary>Which platforms is it on?</summary>
+              <p>iPhone and Android phones.</p>
+            </details>
+            <details>
+              <summary>Can I cancel a Lock In?</summary>
+              <p>No. Once you sign up for a Lock In session, you can't cancel. Signup opens 3 days before the session starts and closes when it begins, so you can preview your plan first.</p>
+            </details>
+            <details>
+              <summary>What happens if I miss a day?</summary>
+              <p>Missing a day is fine. The session only ends if you log workouts on fewer than 3 days in a full 7-day block, or go 6 days in a row without a workout. If it ends, that session's Lock In time and rank progress are voided, but your workouts and Classic progress stay.</p>
+            </details>
+            <details>
+              <summary>How do I earn Classic ranks?</summary>
+              <p>Log workouts. Iron comes with your first, and Muscle, the top Classic rank, at 300.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 Plain Muscle</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="updates.html">Updates</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="eula.html">EULA</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

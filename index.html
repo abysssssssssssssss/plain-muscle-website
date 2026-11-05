@@ -2,13 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-    <meta name="description" content="Plain Muscle. December 2026." />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Plain Muscle</title>
+    <meta name="description" content="Plain Muscle: plan your split, log every workout, and watch your strength rank up. A simple, no-clutter gym tracker. Coming December 2026." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://plain-muscle.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Plain Muscle" />
+    <meta property="og:title" content="Plain Muscle" />
+    <meta property="og:description" content="Plain Muscle: plan your split, log every workout, and watch your strength rank up. A simple, no-clutter gym tracker. Coming December 2026." />
+    <meta property="og:url" content="https://plain-muscle.com/" />
+    <meta property="og:image" content="https://plain-muscle.com/assets/plain-muscle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="assets/muco-favicon.png" />
     <link rel="apple-touch-icon" href="assets/muco-favicon.png" />
     <script>
+      document.documentElement.classList.add("js");
       let savedTheme;
       try {
         savedTheme = localStorage.getItem("plain-muscle-theme");
@@ -18,253 +27,241 @@
           ? savedTheme
           : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     </script>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        --background: #fff;
-        --foreground: #000;
-        --mascot-filter: brightness(0);
-        background: var(--background);
-        color: var(--foreground);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-        -webkit-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-        color-scheme: light;
-        transition: background-color 200ms ease, color 200ms ease;
-      }
-
-      html[data-theme="dark"] {
-        --background: #000;
-        --foreground: #fff;
-        --mascot-filter: brightness(0) invert(1);
-        color-scheme: dark;
-      }
-
-      html,
-      body {
-        width: 100%;
-        overflow-x: hidden;
-        overscroll-behavior-x: none;
-        touch-action: pan-y;
-      }
-
-      body {
-        margin: 0;
-      }
-
-      main {
-        min-height: 100vh;
-        min-height: 100svh;
-        display: grid;
-        place-items: center;
-        padding: 32px 24px;
-        padding-top: max(32px, env(safe-area-inset-top, 0px));
-        padding-right: max(24px, env(safe-area-inset-right, 0px));
-        padding-bottom: max(32px, env(safe-area-inset-bottom, 0px));
-        padding-left: max(24px, env(safe-area-inset-left, 0px));
-      }
-
-      .announcement {
-        width: 100%;
-        text-align: center;
-      }
-
-      .mascot {
-        position: relative;
-        width: min(340px, 100%);
-        margin: 0 auto 8px;
-      }
-
-      .logo {
-        display: block;
-        width: 100%;
-        height: auto;
-        filter: var(--mascot-filter);
-      }
-
-      .light-switch {
-        position: absolute;
-        bottom: calc(78% + 12px);
-        left: 50%;
-        width: 64px;
-        height: 100px;
-        padding: 8px;
-        transform: translateX(-50%);
-        border: 0;
-        background: transparent;
-        color: inherit;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .light-switch svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-
-      .light-switch:focus-visible {
-        outline: 1px dashed currentColor;
-        outline-offset: 4px;
-        border-radius: 8px;
-      }
-
-      html[data-theme="dark"] .light-rays {
-        opacity: 0;
-      }
-
-      .sleep-letters {
-        position: absolute;
-        top: 20%;
-        left: 56%;
-        pointer-events: none;
-        font-size: clamp(20px, 6vw, 24px);
-        font-weight: 300;
-        line-height: 1;
-      }
-
-      .sleep-letters span {
-        position: absolute;
-        opacity: 0;
-        animation: sleep 4.5s ease-in-out infinite;
-      }
-
-      .sleep-letters span:nth-child(2) {
-        animation-delay: -1.5s;
-      }
-
-      .sleep-letters span:nth-child(3) {
-        animation-delay: -3s;
-      }
-
-      @keyframes sleep {
-        0% {
-          opacity: 0;
-          transform: translate(0, 0.25em) scale(0.7) rotate(-8deg);
-        }
-        20% {
-          opacity: 0.7;
-        }
-        55% {
-          opacity: 0.6;
-          transform: translate(0.625em, -1.667em) scale(1.1);
-        }
-        100% {
-          opacity: 0;
-          transform: translate(1.5em, -3.667em) scale(1.6) rotate(8deg);
-        }
-      }
-
-      @media (max-height: 500px) and (orientation: landscape) {
-        .mascot {
-          width: min(240px, 50vh);
-        }
-
-        .sleep-letters {
-          font-size: 18px;
-        }
-
-        .light-switch {
-          height: 68px;
-          bottom: calc(78% + 4px);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          transition: none;
-        }
-
-        .sleep-letters span {
-          animation-duration: 7.5s;
-        }
-
-        .sleep-letters span:nth-child(2) {
-          animation-delay: -2.5s;
-        }
-
-        .sleep-letters span:nth-child(3) {
-          animation-delay: -5s;
-        }
-      }
-
-      h1 {
-        margin: 0;
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 1.4;
-        letter-spacing: 0.02em;
-      }
-
-      p {
-        margin: 8px 0 0;
-        font-size: 11px;
-        font-weight: 300;
-        line-height: 1.5;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img src="assets/muco-favicon.png" alt="" width="1254" height="1254" />
+          Plain Muscle
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-product">Product<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-product">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="updates.html">Updates</a></li>
+              </ul>
+            </li>
+            <li><a href="merch.html">Merch</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-legal">Legal<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-legal">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="eula.html">EULA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="icon-button light-switch" type="button" aria-label="Turn the light off" aria-pressed="false">
+          <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
+            <path d="M32 3v38" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M28 46h8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
+            <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
+            <g class="light-rays" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+              <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
+            </g>
+          </svg>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
     <main>
-      <section class="announcement" aria-label="Plain Muscle launch">
-        <div class="mascot">
-          <img
-            class="logo"
-            src="assets/plain-muscle-transparent.png"
-            alt="A sleeping black mascot wearing headphones"
-            width="1448"
-            height="1086"
-          />
-          <button class="light-switch" type="button" aria-label="Turn the light off" aria-pressed="false" title="Turn the light off">
-            <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
-              <path d="M32 3v38" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-              <path d="M28 46h8" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-              <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
-              <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
-              <g class="light-rays" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
-              </g>
-            </svg>
-          </button>
-          <div class="sleep-letters" aria-hidden="true">
-            <span>z</span>
-            <span>z</span>
-            <span>z</span>
+      <section class="hero">
+        <div class="wrap">
+          <div class="mascot">
+            <img src="assets/plain-muscle-transparent.png" alt="The Plain Muscle mascot asleep with headphones on" width="1448" height="1086" />
+            <div class="sleep-letters" aria-hidden="true"><span>z</span><span>z</span><span>z</span></div>
+          </div>
+          <h1>Plain Muscle</h1>
+          <p class="lead">Plan your split, log every workout, and watch your strength rank up.</p>
+          <div class="buttons">
+            <a class="button" href="#" aria-disabled="true"><small>Coming December 2026</small>App Store</a>
+            <a class="button secondary" href="#" aria-disabled="true"><small>Coming December 2026</small>Google Play</a>
           </div>
         </div>
-        <h1>Plain Muscle</h1>
-        <p><time datetime="2026-12">December 2026</time></p>
+      </section>
+
+      <div class="wrap">
+        <section class="feature reveal" id="focus" aria-labelledby="focus-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/focus.jpg" alt="Plain Muscle focus mode screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="focus-title">Focus UI</h2>
+            <p class="lead">Turn on Focus mode and the app shrinks to what matters: this week's goal and the days you trained.</p>
+            <ul class="checks">
+              <li>Weekly workout goal front and center</li>
+              <li>Month calendar of every day you trained</li>
+              <li>Lock In one tap away</li>
+              <li>No feeds, no ads, no clutter</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="lock-in" aria-labelledby="lock-in-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/lock-in.jpg" alt="Plain Muscle lock in screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Only on Plain Muscle</span>
+            <h2 id="lock-in-title">Locked In Mode</h2>
+            <p class="lead">Pick a commitment and stick to it. No other gym app holds you to your word like this.</p>
+            <ul class="checks">
+              <li>Commit for 1 week, 2 weeks, 1, 3, 4 or 6 months, or a full year</li>
+              <li>Log workouts on at least 3 days in every 7-day block</li>
+              <li>Never go 6 days in a row without a workout</li>
+              <li>No cancelling once you sign up</li>
+              <li>Finish to earn exclusive Locked In ranks</li>
+            </ul>
+            <p class="quote">Are you sure you want to lock in?</p>
+          </div>
+        </section>
+
+        <section class="feature reveal" id="quick-log" aria-labelledby="quick-log-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/log-workout.jpg" alt="Plain Muscle log workout screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="quick-log-title">Quick Log</h2>
+            <p class="lead">Open today's workout, check off your sets, save. That's it.</p>
+            <ul class="checks">
+              <li>Today's exercises ready from your split</li>
+              <li>Check off sets as you go</li>
+              <li>Weight and reps for every set</li>
+              <li>Save once and the day is logged</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="ranks" aria-labelledby="ranks-title">
+          <div class="shot badges">
+            <div class="badge-group">
+              <h3>Classic</h3>
+              <ul class="badge-grid">
+                <li><img src="assets/ranks/iron.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Iron<small>1 workout</small></li>
+                <li><img src="assets/ranks/bronze.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Bronze<small>10 workouts</small></li>
+                <li><img src="assets/ranks/silver.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Silver<small>30 workouts</small></li>
+                <li><img src="assets/ranks/gold.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Gold<small>60 workouts</small></li>
+                <li><img src="assets/ranks/platinum.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Plat<small>100 workouts</small></li>
+                <li><img src="assets/ranks/diamond.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Diamond<small>150 workouts</small></li>
+                <li><img src="assets/ranks/master.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Master<small>201 workouts</small></li>
+                <li><img src="assets/ranks/muscle.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Muscle<small>300 workouts</small></li>
+              </ul>
+            </div>
+            <div class="badge-group">
+              <h3>Locked In</h3>
+              <ul class="badge-grid five">
+                <li><img src="assets/ranks/zenus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Zenus<small>1 month</small></li>
+                <li><img src="assets/ranks/elderon.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Eldron<small>3 months</small></li>
+                <li><img src="assets/ranks/primalus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Primalus<small>6 months</small></li>
+                <li><img src="assets/ranks/ascendor.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Ascendor<small>1 year</small></li>
+                <li><img src="assets/ranks/honorado.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Honorado<small>2 years</small></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="ranks-title">Rank & badges</h2>
+            <p class="lead">Every workout counts toward your next rank. Every badge you earn goes in your Rank Book.</p>
+            <ul class="checks">
+              <li>8 Classic ranks, from Iron to Muscle</li>
+              <li>5 Locked In ranks, from Zenus to Honorado</li>
+              <li>Sign each new badge in your Rank Book</li>
+              <li>Rank-up animation every time you climb</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature reveal" id="basics" aria-labelledby="basics-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/home.jpg" alt="Plain Muscle home screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            
+            <h2 id="basics-title">Basic Functionality</h2>
+            <p class="lead">Everything else you'd expect from a gym tracker, kept simple.</p>
+            <ul class="checks">
+              <li>Plan your weekly split</li>
+              <li>Calendar of every past session</li>
+              <li>Personal records and strength charts in Peaks</li>
+              <li>Steps and calories from Apple Health or Health Connect</li>
+              <li>Workout reminders</li>
+              <li>Light and dark mode</li>
+              <li>Works offline and syncs later</li>
+              <li>English, Chinese and Indonesian</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <section class="section" aria-labelledby="reviews-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <h2 id="reviews-title">Reviews</h2>
+          </div>
+          <div class="reviews reveal" data-reviews></div>
+          <p class="empty-note" data-reviews-empty>Reviews open after launch in December 2026.</p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="wrap reveal">
+          <div class="mascot">
+            <img src="assets/muco-favicon.png" alt="The Plain Muscle mascot" width="1254" height="1254" />
+          </div>
+          <h2>Lock in. December 2026.</h2>
+          <div class="buttons">
+            <a class="button" href="#" aria-disabled="true"><small>Coming December 2026</small>App Store</a>
+            <a class="button secondary" href="#" aria-disabled="true"><small>Coming December 2026</small>Google Play</a>
+          </div>
+        </div>
       </section>
     </main>
-    <script>
-      const root = document.documentElement;
-      const lightSwitch = document.querySelector(".light-switch");
-      const themeColor = document.querySelector('meta[name="theme-color"]');
 
-      // Safari may allow pinch zoom despite the viewport setting.
-      document.addEventListener("gesturestart", (event) => event.preventDefault(), { passive: false });
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 Plain Muscle</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="updates.html">Updates</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="eula.html">EULA</a></li>
+        </ul>
+      </div>
+    </footer>
 
-      function updateLight() {
-        const dark = root.dataset.theme === "dark";
-        const label = dark ? "Turn the light on" : "Turn the light off";
-        lightSwitch.setAttribute("aria-label", label);
-        lightSwitch.setAttribute("aria-pressed", String(dark));
-        lightSwitch.title = label;
-        themeColor.content = dark ? "#000000" : "#ffffff";
-      }
-
-      lightSwitch.addEventListener("click", () => {
-        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-        try {
-          localStorage.setItem("plain-muscle-theme", root.dataset.theme);
-        } catch {}
-        updateLight();
-      });
-
-      updateLight();
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

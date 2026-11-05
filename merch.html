@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Merch · Plain Muscle</title>
+    <meta name="description" content="Plain Muscle merch. Coming soon." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://plain-muscle.com/merch.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Plain Muscle" />
+    <meta property="og:title" content="Merch · Plain Muscle" />
+    <meta property="og:description" content="Plain Muscle merch. Coming soon." />
+    <meta property="og:url" content="https://plain-muscle.com/merch.html" />
+    <meta property="og:image" content="https://plain-muscle.com/assets/plain-muscle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/muco-favicon.png" />
+    <link rel="apple-touch-icon" href="assets/muco-favicon.png" />
+    <script>
+      document.documentElement.classList.add("js");
+      let savedTheme;
+      try {
+        savedTheme = localStorage.getItem("plain-muscle-theme");
+      } catch {}
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <img src="assets/muco-favicon.png" alt="" width="1254" height="1254" />
+          Plain Muscle
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-product">Product<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-product">
+                <li><a href="features.html">Features</a></li>
+                <li><a href="updates.html">Updates</a></li>
+              </ul>
+            </li>
+            <li><a href="merch.html" aria-current="page">Merch</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-legal">Legal<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-legal">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="eula.html">EULA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="icon-button light-switch" type="button" aria-label="Turn the light off" aria-pressed="false">
+          <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
+            <path d="M32 3v38" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M28 46h8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
+            <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
+            <g class="light-rays" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+              <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
+            </g>
+          </svg>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-head">
+        <div class="wrap">
+          <h1>Merch</h1>
+          <p class="lead">Plain gear for people who show up. Coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <!-- TODO: placeholder products. Replace names, prices and images with the real merch. -->
+          <ul class="cards">
+            <li class="card reveal">
+              <div class="card-image"><img src="assets/muco-favicon.png" alt="" width="1254" height="1254" loading="lazy" /></div>
+              <h3>Mascot Tee</h3>
+              <p>Price coming soon</p>
+              <span class="tag">Coming soon</span>
+            </li>
+            <li class="card reveal">
+              <div class="card-image"><img src="assets/muco-favicon.png" alt="" width="1254" height="1254" loading="lazy" /></div>
+              <h3>Plain Hoodie</h3>
+              <p>Price coming soon</p>
+              <span class="tag">Coming soon</span>
+            </li>
+            <li class="card reveal">
+              <div class="card-image"><img src="assets/muco-favicon.png" alt="" width="1254" height="1254" loading="lazy" /></div>
+              <h3>Shaker Bottle</h3>
+              <p>Price coming soon</p>
+              <span class="tag">Coming soon</span>
+            </li>
+          </ul>
+          <p class="empty-note" style="margin-top: 48px">Want to know when it drops? <a href="mailto:official.plain.muscle@gmail.com?subject=Merch">Email us</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 Plain Muscle</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="updates.html">Updates</a></li>
+          <li><a href="merch.html">Merch</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="eula.html">EULA</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
