@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tutorial · Plain Muscle</title>
+    <meta name="description" content="Get started with Plain Muscle: log a workout, set a weekly goal, use Focus mode and Lock In." />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://plainmuscle.com/tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Plain Muscle" />
+    <meta property="og:title" content="Tutorial · Plain Muscle" />
+    <meta property="og:description" content="Get started with Plain Muscle: log a workout, set a weekly goal, use Focus mode and Lock In." />
+    <meta property="og:url" content="https://plainmuscle.com/tutorial" />
+    <meta property="og:image" content="https://plainmuscle.com/assets/plain-muscle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/muco-favicon.png" />
+    <link rel="apple-touch-icon" href="assets/muco-favicon.png" />
+    <script>
+      document.documentElement.classList.add("js");
+      let savedTheme;
+      try {
+        savedTheme = localStorage.getItem("plain-muscle-theme");
+      } catch {}
+      document.documentElement.dataset.theme =
+        savedTheme === "light" || savedTheme === "dark"
+          ? savedTheme
+          : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">
+          <img src="assets/muco-favicon.png" alt="" width="1254" height="1254" />
+          Plain Muscle
+        </a>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-product">Product<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-product">
+                <li><a href="/features">Features</a></li>
+                <li><a href="/updates">Updates</a></li>
+              </ul>
+            </li>
+            <li><a href="/merch">Merch</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle active" type="button" aria-expanded="false" aria-controls="menu-support">Support<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-support">
+                <li><a href="/tutorial" aria-current="page">Tutorial</a></li>
+                <li><a href="/faq">FAQs</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="menu-legal">Legal<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></button>
+              <ul class="dropdown-menu" id="menu-legal">
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+                <li><a href="/eula">EULA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="icon-button light-switch" type="button" aria-label="Turn the light off" aria-pressed="false">
+          <svg viewBox="0 0 64 112" fill="none" aria-hidden="true" focusable="false">
+            <path d="M32 3v38" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M28 46h8" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+            <path d="M16 65a16 16 0 0 1 32 0H16Z" fill="currentColor" />
+            <path d="M24 69a8 8 0 0 0 16 0H24Z" fill="currentColor" />
+            <g class="light-rays" stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+              <path d="M19 74 5 81M23 80 12 96M29 83 25 105M35 83 39 105M41 80 52 96M45 74 59 81" />
+            </g>
+          </svg>
+        </button>
+        <button class="icon-button menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-head">
+        <div class="wrap">
+          <h1>Tutorial</h1>
+          <p class="lead">Get started with Plain Muscle in five steps.</p>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="feature reveal" id="first-workout" aria-labelledby="first-workout-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/log-workout.jpg" alt="Plain Muscle log workout screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Step 1</span>
+            <h2 id="first-workout-title">Log your first workout</h2>
+            <p class="lead">The same steps as the tutorial in the app.</p>
+            <ol class="checks steps">
+              <li>Tap <strong>Calendar</strong>, then tap today's date</li>
+              <li>Name your workout and tap <strong>Done</strong></li>
+              <li>Tap <strong>Use saved workout</strong> to pick a template, or <strong>Add Exercise</strong> to build one</li>
+              <li>Enter reps and weight for each set</li>
+              <li>Tap <strong>Save</strong>. The day now shows as logged</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="weekly-goal" aria-labelledby="weekly-goal-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/home.jpg" alt="Plain Muscle home screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Step 2</span>
+            <h2 id="weekly-goal-title">Set your weekly goal</h2>
+            <p class="lead">Pick how many days a week you want to train.</p>
+            <ol class="checks steps">
+              <li>Open <strong>Home</strong></li>
+              <li>Find <strong>This week's workout progress</strong></li>
+              <li>Tap the pencil and set your goal</li>
+              <li>Every logged day fills the bar</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="feature reveal" id="focus-mode" aria-labelledby="focus-mode-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/focus.jpg" alt="Plain Muscle focus mode screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Step 3</span>
+            <h2 id="focus-mode-title">Turn on Focus mode</h2>
+            <p class="lead">Strip the app down to your goal and your calendar.</p>
+            <ol class="checks steps">
+              <li>Open <strong>Profile</strong></li>
+              <li>Go to <strong>Customization</strong></li>
+              <li>Turn on <strong>Focus mode</strong></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="feature flip reveal" id="lock-in" aria-labelledby="lock-in-title">
+          <div class="shot">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/screens/lock-in.jpg" alt="Plain Muscle lock in screen" width="738" height="1600" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Step 4</span>
+            <h2 id="lock-in-title">Lock In</h2>
+            <p class="lead">Ready to commit? Read the rules first: you can't cancel once you sign up.</p>
+            <ol class="checks steps">
+              <li>Tap <strong>Locked In Mode</strong> on Home</li>
+              <li>Choose your duration, from 1 week to 1 year</li>
+              <li>Check the start and end dates on the calendar</li>
+              <li>Tap <strong>Sign up for Lock In</strong> while signup is open</li>
+              <li>Log workouts on at least 3 days every week, and never go 6 days without one</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="feature reveal" id="ranks" aria-labelledby="ranks-title">
+          <div class="shot badges">
+            <div class="badge-group">
+              <h3>Classic</h3>
+              <ul class="badge-grid">
+                <li><img src="assets/ranks/iron.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Iron<small>1 workout</small></li>
+                <li><img src="assets/ranks/bronze.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Bronze<small>10 workouts</small></li>
+                <li><img src="assets/ranks/silver.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Silver<small>30 workouts</small></li>
+                <li><img src="assets/ranks/gold.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Gold<small>60 workouts</small></li>
+                <li><img src="assets/ranks/platinum.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Plat<small>100 workouts</small></li>
+                <li><img src="assets/ranks/diamond.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Diamond<small>150 workouts</small></li>
+                <li><img src="assets/ranks/master.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Master<small>201 workouts</small></li>
+                <li><img src="assets/ranks/muscle.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Muscle<small>300 workouts</small></li>
+              </ul>
+            </div>
+            <div class="badge-group">
+              <h3>Locked In</h3>
+              <ul class="badge-grid five">
+                <li><img src="assets/ranks/zenus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Zenus<small>1 month</small></li>
+                <li><img src="assets/ranks/elderon.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Eldron<small>3 months</small></li>
+                <li><img src="assets/ranks/primalus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Primalus<small>6 months</small></li>
+                <li><img src="assets/ranks/ascendor.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Ascendor<small>1 year</small></li>
+                <li><img src="assets/ranks/honorado.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Honorado<small>2 years</small></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <span class="eyebrow">Step 5</span>
+            <h2 id="ranks-title">Climb the ranks</h2>
+            <p class="lead">Every workout counts. Finished Lock In time earns the Locked In ranks.</p>
+            <ol class="checks steps">
+              <li>Log workouts to move from Iron toward Muscle</li>
+              <li>Sign each new badge in your Rank Book</li>
+              <li>See your records and charts in Peaks</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+
+      <section class="cta">
+        <div class="wrap reveal">
+          <h2>Need the walkthrough again?</h2>
+          <p class="lead" style="margin-left: auto; margin-right: auto">In the app, open Profile and tap Tutorial to replay it.</p>
+          <div class="buttons">
+            <a class="button" href="/faq">Read the FAQs</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 Plain Muscle</span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/features">Features</a></li>
+          <li><a href="/updates">Updates</a></li>
+          <li><a href="/merch">Merch</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/tutorial">Tutorial</a></li>
+          <li><a href="/faq">FAQs</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/eula">EULA</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
