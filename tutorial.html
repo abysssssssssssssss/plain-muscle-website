@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Tutorial · Plain Muscle</title>
-    <meta name="description" content="Get started with Plain Muscle: log a workout, set a weekly goal, use Focus mode and Lock In." />
+    <meta name="description" content="Watch Plain Muscle video tutorials on logging workouts, making templates, using Focus Mode, and earning ranks." />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://plainmuscle.com/tutorial" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Plain Muscle" />
     <meta property="og:title" content="Tutorial · Plain Muscle" />
-    <meta property="og:description" content="Get started with Plain Muscle: log a workout, set a weekly goal, use Focus mode and Lock In." />
+    <meta property="og:description" content="Watch Plain Muscle video tutorials on logging workouts, making templates, using Focus Mode, and earning ranks." />
     <meta property="og:url" content="https://plainmuscle.com/tutorial" />
     <meta property="og:image" content="https://plainmuscle.com/assets/plain-muscle.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,6 +28,7 @@
           : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     </script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tutorial.css" />
   </head>
   <body>
     <header class="site-header">
@@ -82,149 +83,139 @@
       </div>
     </header>
 
-    <main>
-      <section class="page-head">
-        <div class="wrap">
-          <h1>Tutorial</h1>
-          <p class="lead">Get started with Plain Muscle in five steps.</p>
+    <main class="tutorial wrap">
+      <section class="tutorial-hero" aria-labelledby="tutorial-title">
+        <div class="tutorial-intro">
+          <p class="tutorial-kicker">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m8.5 7.5 4 2.5-4 2.5v-5Z" fill="currentColor"/></svg>
+            Video tutorials
+          </p>
+          <h1 id="tutorial-title">Learn Plain Muscle.</h1>
+          <p class="tutorial-lead">Follow along in the app, from logging your first workout to making Focus Mode your own.</p>
+          <div class="tutorial-actions">
+            <a class="button" href="https://www.youtube.com/watch?v=_F83vct66yk" data-video="How to Log Workouts">
+              <span class="tutorial-play-icon" aria-hidden="true"></span>Watch first tutorial
+            </a>
+            <a class="tutorial-text-link" href="#video-library">Browse tutorials <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
+
+        <a class="tutorial-featured" id="first-workout" href="https://www.youtube.com/watch?v=_F83vct66yk" data-video="How to Log Workouts">
+          <span class="tutorial-featured-art" aria-hidden="true">
+            <img class="tutorial-device tutorial-device-back" src="assets/screens/calendar.jpg" alt="" width="738" height="1600" />
+            <img class="tutorial-device tutorial-device-front" src="assets/screens/log-workout.jpg" alt="" width="738" height="1600" />
+          </span>
+          <span class="tutorial-featured-copy">
+            <span class="tutorial-featured-label">Start here</span>
+            <strong>Log your<br />first workout</strong>
+            <span class="tutorial-play" aria-hidden="true"><span class="tutorial-play-icon"></span></span>
+          </span>
+          <span class="tutorial-duration">0:57</span>
+        </a>
       </section>
 
-      <div class="wrap">
-        <section class="feature reveal" id="first-workout" aria-labelledby="first-workout-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/log-workout.jpg" alt="Plain Muscle log workout screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
+      <section class="tutorial-library" id="video-library" aria-labelledby="library-title">
+        <div class="tutorial-library-head">
           <div>
-            <span class="eyebrow">Step 1</span>
-            <h2 id="first-workout-title">Log your first workout</h2>
-            <p class="lead">The same steps as the tutorial in the app.</p>
-            <ol class="checks steps">
-              <li>Tap <strong>Calendar</strong>, then tap today's date</li>
-              <li>Name your workout and tap <strong>Done</strong></li>
-              <li>Tap <strong>Use saved workout</strong> to pick a template, or <strong>Add Exercise</strong> to build one</li>
-              <li>Enter reps and weight for each set</li>
-              <li>Tap <strong>Save</strong>. The day now shows as logged</li>
-            </ol>
+            <h2 id="library-title">Tutorial library</h2>
+            <p>Learn how to use Plain Muscle’s features.</p>
           </div>
-        </section>
-
-        <section class="feature flip reveal" id="weekly-goal" aria-labelledby="weekly-goal-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/home.jpg" alt="Plain Muscle home screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Step 2</span>
-            <h2 id="weekly-goal-title">Set your weekly goal</h2>
-            <p class="lead">Pick how many days a week you want to train.</p>
-            <ol class="checks steps">
-              <li>Open <strong>Home</strong></li>
-              <li>Find <strong>This week's workout progress</strong></li>
-              <li>Tap the pencil and set your goal</li>
-              <li>Every logged day fills the bar</li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="feature reveal" id="focus-mode" aria-labelledby="focus-mode-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/focus.jpg" alt="Plain Muscle focus mode screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Step 3</span>
-            <h2 id="focus-mode-title">Turn on Focus mode</h2>
-            <p class="lead">Strip the app down to your goal and your calendar.</p>
-            <ol class="checks steps">
-              <li>Open <strong>Profile</strong></li>
-              <li>Go to <strong>Customization</strong></li>
-              <li>Turn on <strong>Focus mode</strong></li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="feature flip reveal" id="lock-in" aria-labelledby="lock-in-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/lock-in.jpg" alt="Plain Muscle lock in screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Step 4</span>
-            <h2 id="lock-in-title">Lock In</h2>
-            <p class="lead">Ready to commit? Read the rules first: you can't cancel once you sign up.</p>
-            <ol class="checks steps">
-              <li>Tap <strong>Locked In Mode</strong> on Home</li>
-              <li>Choose your duration, from 1 week to 1 year</li>
-              <li>Check the start and end dates on the calendar</li>
-              <li>Tap <strong>Sign up for Lock In</strong> while signup is open</li>
-              <li>Log workouts on at least 3 days every week, and never go 6 days without one</li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="feature reveal" id="ranks" aria-labelledby="ranks-title">
-          <div class="shot badges">
-            <div class="badge-group">
-              <h3>Classic</h3>
-              <ul class="badge-grid">
-                <li><img src="assets/ranks/iron.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Iron<small>1 workout</small></li>
-                <li><img src="assets/ranks/bronze.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Bronze<small>10 workouts</small></li>
-                <li><img src="assets/ranks/silver.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Silver<small>30 workouts</small></li>
-                <li><img src="assets/ranks/gold.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Gold<small>60 workouts</small></li>
-                <li><img src="assets/ranks/platinum.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Plat<small>100 workouts</small></li>
-                <li><img src="assets/ranks/diamond.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Diamond<small>150 workouts</small></li>
-                <li><img src="assets/ranks/master.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Master<small>201 workouts</small></li>
-                <li><img src="assets/ranks/muscle.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Muscle<small>300 workouts</small></li>
-              </ul>
-            </div>
-            <div class="badge-group">
-              <h3>Locked In</h3>
-              <ul class="badge-grid five">
-                <li><img src="assets/ranks/zenus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Zenus<small>1 month</small></li>
-                <li><img src="assets/ranks/elderon.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Eldron<small>3 months</small></li>
-                <li><img src="assets/ranks/primalus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Primalus<small>6 months</small></li>
-                <li><img src="assets/ranks/ascendor.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Ascendor<small>1 year</small></li>
-                <li><img src="assets/ranks/honorado.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Honorado<small>2 years</small></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Step 5</span>
-            <h2 id="ranks-title">Climb the ranks</h2>
-            <p class="lead">Every workout counts. Finished Lock In time earns the Locked In ranks.</p>
-            <ol class="checks steps">
-              <li>Log workouts to move from Iron toward Muscle</li>
-              <li>Sign each new badge in your Rank Book</li>
-              <li>See your records and charts in Peaks</li>
-            </ol>
-          </div>
-        </section>
-      </div>
-
-      <section class="cta">
-        <div class="wrap reveal">
-          <h2>Need the walkthrough again?</h2>
-          <p class="lead" style="margin-left: auto; margin-right: auto">In the app, open Profile and tap Tutorial to replay it.</p>
-          <div class="buttons">
-            <a class="button" href="/faq">Read the FAQs</a>
-          </div>
+          <a class="tutorial-text-link" href="https://www.youtube.com/@PlainMuscle/videos">Visit the YouTube channel <span aria-hidden="true">↗</span></a>
         </div>
+
+        <section class="tutorial-group" aria-labelledby="workout-tools-title">
+          <h3 id="workout-tools-title">Workout tools</h3>
+          <ul class="tutorial-grid">
+            <li>
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=_F83vct66yk" data-video="How to Log Workouts">
+                <span class="tutorial-poster" aria-hidden="true">
+                  <img src="assets/screens/log-workout.jpg" alt="" width="738" height="1600" loading="lazy" />
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">How to Log Workouts <span class="tutorial-time">0:57</span></span>
+                <span class="tutorial-summary">Add exercises, track your sets, and save the session.</span>
+              </a>
+            </li>
+            <li>
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=k0eXCFx1Fv8" data-video="How to Create a Workout Template">
+                <span class="tutorial-poster" aria-hidden="true">
+                  <img src="assets/screens/plans.png" alt="" width="738" height="1600" loading="lazy" />
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">Create a Workout Template <span class="tutorial-time">0:59</span></span>
+                <span class="tutorial-summary">Save a routine you can pull up next time.</span>
+              </a>
+            </li>
+            <li>
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=I-kXkm68FhE" data-video="How to Use Quick Workout">
+                <span class="tutorial-poster tutorial-poster-quick" aria-hidden="true">
+                  <img src="assets/screens/log-workout.jpg" alt="" width="738" height="1600" loading="lazy" />
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">Use Quick Workout <span class="tutorial-time">1:32</span></span>
+                <span class="tutorial-summary">Start a workout from the quick entry point.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="tutorial-group" aria-labelledby="focus-ranks-title">
+          <h3 id="focus-ranks-title">Focus mode &amp; Rank system</h3>
+          <ul class="tutorial-grid">
+            <li id="focus-mode">
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=u3kXW2kaBWw" data-video="Locating Focus Mode and Rank Theme">
+                <span class="tutorial-poster" aria-hidden="true">
+                  <img src="assets/screens/profile.jpg" alt="" width="738" height="1600" loading="lazy" />
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">Find Focus Mode and Rank Theme <span class="tutorial-time">0:58</span></span>
+                <span class="tutorial-summary">Find both controls in your profile settings.</span>
+              </a>
+            </li>
+            <li>
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=r2jmCtSNIKo" data-video="Focus Mode Showcase">
+                <span class="tutorial-poster" aria-hidden="true">
+                  <img src="assets/screens/focus.jpg" alt="" width="738" height="1600" loading="lazy" />
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">Focus Mode Showcase <span class="tutorial-time">1:02</span></span>
+                <span class="tutorial-summary">See how the simplified layout puts your calendar and goal up front.</span>
+              </a>
+            </li>
+            <li id="ranks">
+              <a class="tutorial-video" href="https://www.youtube.com/watch?v=8ux5YqSrqLk" data-video="Rank System Showcase">
+                <span class="tutorial-poster tutorial-poster-ranks" aria-hidden="true">
+                  <span class="tutorial-rank-title">Book of<br />Ranks</span>
+                  <span class="tutorial-rank-orb">?</span>
+                  <span class="tutorial-play"><span class="tutorial-play-icon"></span></span>
+                </span>
+                <span class="tutorial-video-title">Rank System Showcase <span class="tutorial-time">0:40</span></span>
+                <span class="tutorial-summary">See how logged workouts earn ranks in your Rank Book.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section class="tutorial-help" aria-labelledby="tutorial-help-title">
+        <div>
+          <h2 id="tutorial-help-title">Need a hand?</h2>
+          <p>Replay the walkthrough under <strong>Profile → Tutorial</strong> in the app, or check the FAQs.</p>
+        </div>
+        <a class="button secondary" href="/faq">Read the FAQs</a>
       </section>
     </main>
+
+    <dialog class="tutorial-dialog" aria-labelledby="tutorial-dialog-title">
+      <div class="tutorial-dialog-head">
+        <h2 id="tutorial-dialog-title"></h2>
+        <form method="dialog">
+          <button type="submit" class="tutorial-close" aria-label="Close video" autofocus>×</button>
+        </form>
+      </div>
+      <div class="tutorial-player"></div>
+      <a class="tutorial-text-link tutorial-watch-link" target="_blank" rel="noopener">Watch on YouTube <span aria-hidden="true">↗</span></a>
+    </dialog>
 
     <footer class="site-footer">
       <div class="wrap">
@@ -245,5 +236,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="tutorial.js"></script>
   </body>
 </html>
