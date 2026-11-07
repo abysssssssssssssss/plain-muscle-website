@@ -634,6 +634,30 @@ h3 {
   object-position: top;
 }
 
+.theme-shot {
+  align-items: center;
+  aspect-ratio: auto;
+  padding: clamp(36px, 6vw, 72px) clamp(16px, 4vw, 32px);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(8px, 2vw, 20px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  text-align: center;
+}
+
+.theme-grid img {
+  display: block;
+  height: auto;
+  margin-bottom: 8px;
+  border-radius: 20%;
+}
+
 .placeholder {
   display: flex;
   flex-direction: column;
@@ -1036,7 +1060,7 @@ h3 {
 }
 
 @media (max-width: 420px) {
-  .shot {
+  .shot:not(.theme-shot) {
     padding: 28px 24px 0;
   }
 

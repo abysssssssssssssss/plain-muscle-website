@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Features · Plain Muscle</title>
-    <meta name="description" content="Lock In, workout logging, calendar, Peaks, ranks and the Rank Book: everything Plain Muscle does." />
+    <meta name="description" content="Explore Focus Mode, Rank Themes, and all five regular tabs in the Plain Muscle workout tracker." />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href="https://plainmuscle.com/features" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Plain Muscle" />
     <meta property="og:title" content="Features · Plain Muscle" />
-    <meta property="og:description" content="Lock In, workout logging, calendar, Peaks, ranks and the Rank Book: everything Plain Muscle does." />
+    <meta property="og:description" content="Explore Focus Mode, Rank Themes, and all five regular tabs in the Plain Muscle workout tracker." />
     <meta property="og:url" content="https://plainmuscle.com/features" />
     <meta property="og:image" content="https://plainmuscle.com/assets/plain-muscle.png" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -28,6 +28,7 @@
           : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     </script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="features.css" />
   </head>
   <body>
     <header class="site-header">
@@ -82,201 +83,205 @@
       </div>
     </header>
 
-    <main>
-      <section class="page-head">
-        <div class="wrap">
-          <h1>Features</h1>
-          <p class="lead">Everything Plain Muscle does, and nothing it doesn't need to.</p>
+    <main class="features-page">
+      <div class="wrap feature-intro">
+        <div>
+          <p class="feature-kicker">Features</p>
+          <h1>Inside Plain Muscle</h1>
+          <p class="lead">Find your way around the app, from the single-screen Focus Mode to the five tabs in Regular mode.</p>
         </div>
-      </section>
-
-      <div class="wrap">
-        <section class="feature reveal" id="focus" aria-labelledby="focus-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/focus.jpg" alt="Plain Muscle focus mode screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="focus-title">Focus UI</h2>
-            <p class="lead">Turn on Focus mode and the app shrinks to what matters: this week's goal and the days you trained.</p>
-            <ul class="checks">
-              <li>Weekly workout goal front and center</li>
-              <li>Month calendar of every day you trained</li>
-              <li>Lock In one tap away</li>
-              <li>No feeds, no ads, no clutter</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="feature flip reveal" id="lock-in" aria-labelledby="lock-in-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/lock-in.jpg" alt="Plain Muscle lock in screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            <span class="eyebrow">Only on Plain Muscle</span>
-            <h2 id="lock-in-title">Locked In Mode</h2>
-            <p class="lead">Pick a commitment and stick to it. No other gym app holds you to your word like this.</p>
-            <ul class="checks">
-              <li>Commit for 1 week, 2 weeks, 1, 3, 4 or 6 months, or a full year</li>
-              <li>Log workouts on at least 3 days in every 7-day block</li>
-              <li>Never go 6 days in a row without a workout</li>
-              <li>No cancelling once you sign up</li>
-              <li>Finish to earn exclusive Locked In ranks</li>
-            </ul>
-            <p class="quote">Are you sure you want to lock in?</p>
-          </div>
-        </section>
-
-        <section class="feature reveal" id="quick-log" aria-labelledby="quick-log-title">
-          <div class="shot">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/screens/log-workout.jpg" alt="Plain Muscle log workout screen" width="738" height="1600" loading="lazy" decoding="async" />
-              </div>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="quick-log-title">Logging & split planning</h2>
-            <p class="lead">Build your weekly split once, then just show up and check off sets.</p>
-            <ul class="checks">
-              <li>Today's exercises ready from your split</li>
-              <li>Check off sets as you go</li>
-              <li>Weight and reps for every set</li>
-              <li>Save once and the day is logged</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="feature flip reveal" aria-labelledby="calendar-title">
-          <div class="shot" aria-hidden="true">
-            <div class="phone">
-              <div class="phone-screen">
-                <!-- TODO: screenshot "calendar". Replace the placeholder below with <img src="assets/screens/calendar.jpg" alt="Calendar screen" /> -->
-                <div class="placeholder">
-                  <strong>Calendar screen</strong>
-                  Screenshot coming soon
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="calendar-title">Calendar</h2>
-            <p class="lead">Every workout you save lands on your calendar, so you can see your consistency at a glance.</p>
-            <ul class="checks">
-              <li>Month view of every session</li>
-              <li>Tap a day to see what you did</li>
-              <li>Lock In days marked on the calendar</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="feature reveal" aria-labelledby="peaks-title">
-          <div class="shot" aria-hidden="true">
-            <div class="phone">
-              <div class="phone-screen">
-                <!-- TODO: screenshot "peaks". Replace the placeholder below with <img src="assets/screens/peaks.jpg" alt="Peaks screen" /> -->
-                <div class="placeholder">
-                  <strong>Peaks screen</strong>
-                  Screenshot coming soon
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="peaks-title">Peaks</h2>
-            <p class="lead">Your personal records and strength over time, exercise by exercise.</p>
-            <ul class="checks">
-              <li>Best lift for every exercise</li>
-              <li>Strength charts over time</li>
-              <li>Full workout history per exercise</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="feature flip reveal" id="ranks" aria-labelledby="ranks-title">
-          <div class="shot badges">
-            <div class="badge-group">
-              <h3>Classic</h3>
-              <ul class="badge-grid">
-                <li><img src="assets/ranks/iron.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Iron<small>1 workout</small></li>
-                <li><img src="assets/ranks/bronze.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Bronze<small>10 workouts</small></li>
-                <li><img src="assets/ranks/silver.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Silver<small>30 workouts</small></li>
-                <li><img src="assets/ranks/gold.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Gold<small>60 workouts</small></li>
-                <li><img src="assets/ranks/platinum.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Plat<small>100 workouts</small></li>
-                <li><img src="assets/ranks/diamond.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Diamond<small>150 workouts</small></li>
-                <li><img src="assets/ranks/master.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Master<small>201 workouts</small></li>
-                <li><img src="assets/ranks/muscle.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Muscle<small>300 workouts</small></li>
-              </ul>
-            </div>
-            <div class="badge-group">
-              <h3>Locked In</h3>
-              <ul class="badge-grid five">
-                <li><img src="assets/ranks/zenus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Zenus<small>1 month</small></li>
-                <li><img src="assets/ranks/elderon.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Eldron<small>3 months</small></li>
-                <li><img src="assets/ranks/primalus.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Primalus<small>6 months</small></li>
-                <li><img src="assets/ranks/ascendor.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Ascendor<small>1 year</small></li>
-                <li><img src="assets/ranks/honorado.png" alt="" width="1254" height="1254" loading="lazy" decoding="async" />Honorado<small>2 years</small></li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="ranks-title">Rank & badges</h2>
-            <p class="lead">Every workout counts toward your next rank. Every badge you earn goes in your Rank Book.</p>
-            <ul class="checks">
-              <li>8 Classic ranks, from Iron to Muscle</li>
-              <li>5 Locked In ranks, from Zenus to Honorado</li>
-              <li>Sign each new badge in your Rank Book</li>
-              <li>Rank-up animation every time you climb</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="feature reveal" aria-labelledby="rank-book-title">
-          <div class="shot" aria-hidden="true">
-            <div class="phone">
-              <div class="phone-screen">
-                <!-- TODO: screenshot "rank-book". Replace the placeholder below with <img src="assets/screens/rank-book.jpg" alt="Rank Book screen" /> -->
-                <div class="placeholder">
-                  <strong>Rank Book screen</strong>
-                  Screenshot coming soon
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            
-            <h2 id="rank-book-title">Rank Book</h2>
-            <p class="lead">A book of every badge you've earned, each one signed with your finger.</p>
-            <ul class="checks">
-              <li>Classic and Locked In pages</li>
-              <li>Sign again for every new badge</li>
-              <li>See when you earned each rank</li>
-            </ul>
-          </div>
-        </section>
+        <nav class="feature-index" aria-label="On this page">
+          <a href="#main-features"><span>Main features</span><span aria-hidden="true">↓</span></a>
+          <a href="#basics"><span>Regular tabs</span><span aria-hidden="true">↓</span></a>
+        </nav>
       </div>
 
-      <section class="cta">
-        <div class="wrap reveal">
-          <h2>Questions?</h2>
-          <div class="buttons">
-            <a class="button" href="/faq">Read the FAQs</a>
-            <a class="button secondary" href="/tutorial">Open the tutorial</a>
-          </div>
+      <section class="wrap feature-chapter" id="main-features" aria-labelledby="main-features-title">
+        <header class="chapter-heading">
+          <h2 id="main-features-title">Main</h2>
+          <p>Choose what you see and how it looks.</p>
+        </header>
+        <div class="feature-showcase">
+          <article class="showcase-item focus-feature" id="focus">
+            <div>
+              <h3>Focus Mode</h3>
+              <p>One screen for your monthly calendar, weekly goal, and Workout Gallery. Start logging today’s workout with one tap.</p>
+            </div>
+            <img class="focus-screen" src="assets/screens/focus.jpg" alt="Focus Mode showing the monthly calendar, Add a workout for today, weekly workout goal, and Workout Gallery" width="738" height="1600" decoding="async" />
+          </article>
+
+          <article class="showcase-item rank-theme-feature">
+            <h3>Rank Theme</h3>
+            <p>Unlock themes with rank orbs. Each has its own art, fonts, and icons in Focus and Regular mode. Use the Day Randomizer to rotate unlocked themes.</p>
+            <ul class="theme-samples" aria-label="Rank Theme examples">
+              <li><img src="assets/themes/cyberpunk.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />Cyberpunk</li>
+              <li><img src="assets/themes/bauhaus.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />Bauhaus</li>
+              <li><img src="assets/themes/celestial.png" alt="" width="1024" height="1024" loading="lazy" decoding="async" />Celestial</li>
+            </ul>
+          </article>
+
+          <article class="showcase-item customization-feature">
+            <h3>Customization</h3>
+            <p>Pick light or dark, choose the Default or Refined layout, and decide which details appear in the workout editor.</p>
+            <ul class="customization-options" aria-label="More customization options">
+              <li>Navigation labels</li>
+              <li>Glass navigation</li>
+              <li>Default workout details</li>
+            </ul>
+          </article>
         </div>
       </section>
+
+      <section class="wrap feature-chapter regular-chapter" id="basics" aria-labelledby="regular-title">
+        <header class="chapter-heading">
+          <h2 id="regular-title">Regular</h2>
+          <p>Explore the five tabs in the app.</p>
+        </header>
+
+        <div class="regular-guide" data-feature-guide>
+          <nav class="regular-tabs" aria-label="Regular mode tabs">
+            <a href="#regular-home" id="tab-home">Home</a>
+            <a href="#regular-calendar" id="tab-calendar">Calendar</a>
+            <a href="#regular-plans" id="tab-plans">Plans</a>
+            <a href="#regular-progress" id="tab-progress">Progress</a>
+            <a href="#regular-profile" id="tab-profile">Profile</a>
+          </nav>
+
+          <section class="regular-panel" id="regular-home" aria-labelledby="home-panel-title">
+            <div class="panel-copy">
+              <h3 id="home-panel-title">Home</h3>
+              <p class="panel-lead">See what’s on for the week and how much you’ve trained.</p>
+              <dl class="panel-details">
+                <div id="lock-in">
+                  <dt>Locked In Mode</dt>
+                  <dd>Start a commitment or check your active session and the time you’ve locked in.</dd>
+                </div>
+                <div>
+                  <dt>Your Week</dt>
+                  <dd>See what’s scheduled in your weekly workout plan.</dd>
+                </div>
+                <div>
+                  <dt>This Week’s Workout Progress</dt>
+                  <dd>Check your logged workouts against your weekly goal.</dd>
+                </div>
+                <div>
+                  <dt>Workout Gallery</dt>
+                  <dd>Browse the photos you’ve saved with your workouts.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="panel-screen">
+              <img src="assets/screens/home.jpg" alt="The Home tab showing Locked In Mode, Your Week, and This Week’s Workout Progress" width="738" height="1600" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <section class="regular-panel" id="regular-calendar" aria-labelledby="calendar-panel-title">
+            <div class="panel-copy">
+              <h3 id="calendar-panel-title">Calendar</h3>
+              <p class="panel-lead">Browse your training by month and open any day to see what you logged.</p>
+              <dl class="panel-details">
+                <div>
+                  <dt>Log a Workout</dt>
+                  <dd>Tap a date to add exercises and save a workout right from Calendar.</dd>
+                </div>
+                <div>
+                  <dt><span class="calendar-dot" aria-hidden="true"></span> Red dot</dt>
+                  <dd>Marks today in the default calendar before you log a workout.</dd>
+                </div>
+                <div>
+                  <dt><span class="calendar-star" aria-hidden="true">★</span> Silver star</dt>
+                  <dd>Shows that today’s workout counted toward your Classic rank.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="panel-screen">
+              <img src="assets/screens/calendar.jpg" alt="The Calendar tab showing the monthly calendar and a red dot under today’s date" width="738" height="1600" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <section class="regular-panel" id="regular-plans" aria-labelledby="plans-panel-title">
+            <div class="panel-copy">
+              <h3 id="plans-panel-title">Plans</h3>
+              <p class="panel-lead">Pick a template, build your own routine, or log a session on the spot.</p>
+              <dl class="panel-details">
+                <div id="quick-log">
+                  <dt>Add a Workout Today</dt>
+                  <dd>Use a saved workout or start from scratch.</dd>
+                </div>
+                <div>
+                  <dt>Templates</dt>
+                  <dd>Browse ready-made plans and add them to My Workouts.</dd>
+                </div>
+                <div>
+                  <dt>My Workouts</dt>
+                  <dd>Build and save your own workouts and training splits.</dd>
+                </div>
+                <div>
+                  <dt>Workout Details</dt>
+                  <dd>Log exercises, sets, weight, and reps. Add notes, biometrics, photos, and session details.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="panel-screen">
+              <img src="assets/screens/plans.png" alt="The Plans tab showing Add a workout for today, Templates, My Workouts, and Create Workout Split" width="738" height="1600" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <section class="regular-panel" id="regular-progress" aria-labelledby="progress-panel-title">
+            <div class="panel-copy">
+              <h3 id="progress-panel-title">Progress</h3>
+              <p class="panel-lead">See how your lifts have changed and revisit the sessions that got you there.</p>
+              <dl class="panel-details">
+                <div>
+                  <dt>Progress</dt>
+                  <dd>Pick an exercise to see its graph and recent training days.</dd>
+                </div>
+                <div>
+                  <dt>Records</dt>
+                  <dd>Check workout stats, recent personal bests, and your workout history.</dd>
+                </div>
+                <div id="ranks">
+                  <dt>Achievements</dt>
+                  <dd>See your Classic and Promised ranks, sign new badges in the Rank Book, and revisit your achievement history.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="panel-screen">
+              <img src="assets/screens/progress.jpg" alt="The Progress tab showing the exercise graph, recent training days, and the Records and Achievements tabs" width="738" height="1600" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <section class="regular-panel" id="regular-profile" aria-labelledby="profile-panel-title">
+            <div class="panel-copy">
+              <h3 id="profile-panel-title">Profile</h3>
+              <p class="panel-lead">Manage your settings and account, or get help with the app.</p>
+              <dl class="panel-details">
+                <div>
+                  <dt>Preferences</dt>
+                  <dd>Set your notifications, appearance, and language. Connect Apple Health or Health Connect to see steps and calories.</dd>
+                </div>
+                <div>
+                  <dt>Account</dt>
+                  <dd>Edit your profile, manage email preferences and billing, check cloud sync, or reset your password.</dd>
+                </div>
+                <div>
+                  <dt>Help &amp; Information</dt>
+                  <dd>Contact support, read the FAQs, replay the tutorial, and find app and legal information.</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="panel-screen">
+              <img src="assets/screens/profile.jpg" alt="Profile settings showing Preferences, Account, and Help and Information" width="738" height="1180" loading="lazy" decoding="async" />
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="wrap feature-help" aria-labelledby="feature-help-title">
+        <h2 id="feature-help-title">Need a hand?</h2>
+        <a href="/tutorial">Open the tutorial <span aria-hidden="true">↗</span></a>
+        <a href="/faq">Read the FAQs <span aria-hidden="true">↗</span></a>
+      </aside>
     </main>
 
     <footer class="site-footer">
@@ -298,5 +303,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="features.js"></script>
   </body>
 </html>
